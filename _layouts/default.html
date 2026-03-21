@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko-KR' }}">
+  {% include head.html %}
+  <body class="{{ page.body_class }}">
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    {% include site-header.html %}
+    <main id="main">
+      {{ content }}
+    </main>
+    {% include site-footer.html %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+    {% if page.page_scripts %}
+      {% for script in page.page_scripts %}
+        <script src="{{ script | relative_url }}"></script>
+      {% endfor %}
+    {% endif %}
+  </body>
+</html>

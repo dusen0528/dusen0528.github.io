@@ -1,0 +1,27 @@
+{% assign post = include.post %}
+<a
+  class="post-card post-card-link reveal is-visible js-post-card"
+  href="{{ post.url | relative_url }}"
+  data-category="{{ post.category }}"
+  data-search="{{ post.title | append: ' ' | append: post.summary | append: ' ' | append: post.tags | join: ' ' | downcase | escape }}"
+>
+  <div class="post-card-top">
+    <span class="article-category">{{ post.category }}</span>
+    <i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i>
+  </div>
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.summary }}</p>
+  <div class="post-meta">
+    <span>{{ post.date | date: "%Y년 %-m월 %-d일" }}</span>
+    {% if post.reading_time %}
+      <span>{{ post.reading_time }}</span>
+    {% endif %}
+  </div>
+  {% if post.tags %}
+    <div class="tag-row">
+      {% for tag in post.tags %}
+        <span class="tag">#{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</a>

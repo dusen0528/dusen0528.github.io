@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<section class="section-shell">
+  <div class="container article-shell">
+    <a class="back-link reveal is-visible" href="{{ '/blog/' | relative_url }}">
+      <i class="bi bi-arrow-left" aria-hidden="true"></i>
+      글 목록으로 돌아가기
+    </a>
+
+    <header class="article-header reveal is-visible">
+      <span class="article-category">{{ page.category }}</span>
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}
+        <p class="article-summary">{{ page.summary }}</p>
+      {% endif %}
+      <div class="article-meta-row">
+        <span>{{ page.date | date: "%Y년 %-m월 %-d일" }}</span>
+        {% if page.reading_time %}
+          <span>{{ page.reading_time }}</span>
+        {% endif %}
+      </div>
+      {% if page.tags %}
+        <div class="tag-row">
+          {% for tag in page.tags %}
+            <span class="tag">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+
+    <article class="article-body reveal is-visible">
+      {{ content }}
+    </article>
+  </div>
+</section>
+
+<section class="section-shell muted-surface">
+  <div class="container article-shell">
+    <div class="section-heading reveal is-visible">
+      <span class="eyebrow">관련 글</span>
+      <h2>같이 보면 좋은 글</h2>
+    </div>
+    <div class="row g-4">
+      {% assign related_posts = site.posts | where: "category", page.category %}
+      {% assign related_count = 0 %}
+      {% for post in related_posts %}
+        {% if post.url != page.url and related_count < 3 %}
+          {% assign related_count = related_count | plus: 1 %}
+          <div class="col-md-6 col-lg-4">
+            {% include post-card.html post=post %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      {% if related_count == 0 %}
+        {% for post in site.posts limit:3 %}
+          {% if post.url != page.url %}
+            <div class="col-md-6 col-lg-4">
+              {% include post-card.html post=post %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg" aria-label="메인 메뉴">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">I</span>
+        <span>{{ site.brand_name | default: site.title }}</span>
+      </a>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#siteNav"
+        aria-controls="siteNav"
+        aria-expanded="false"
+        aria-label="메뉴 열기"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/#about' | relative_url }}"
+            >
+              소개
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/#experience' | relative_url }}"
+            >
+              경력
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/#projects' | relative_url }}"
+            >
+              문제 해결 경험
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/#education' | relative_url }}"
+            >
+              교육 · 과정
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/#contact' | relative_url }}"
+            >
+              링크
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-brand btn-sm" href="{{ '/blog/' | relative_url }}">기술블로그</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

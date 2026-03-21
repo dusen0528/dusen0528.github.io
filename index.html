@@ -1,0 +1,470 @@
+---
+layout: default
+title: 최인호 | Backend · AI Engineer
+description: 교육, 기술 스터디, 사이드 프로젝트에서 얻은 관점을 실무와 프로젝트에 연결하며 기록하는 백엔드 · AI 엔지니어 최인호의 기술 블로그
+nav_key: home
+---
+{% assign featured_projects = site.projects | where: "featured", true | sort: "order" %}
+
+<section class="hero-section" id="about">
+  <div class="container">
+    <section class="hero-panel hero-panel-wide reveal" aria-label="소개">
+      <div class="hero-unified">
+        <div class="hero-main">
+          <h2 class="hero-title">
+            영상 도메인 AI/백엔드 개발자 {{ site.author.name }}
+          </h2>
+
+          <div class="hero-copy hero-copy-inline">
+            <p>교육, 기술 스터디, 사이드 프로젝트를 병행하며 다양한 분야의 관점을 접하고, 이를 실제 업무와 프로젝트에 적용해보는 과정을 중요하게 생각합니다.</p>
+            <p>직군에 관계없이 문제를 바라보는 방식의 차이를 이해하고, 이를 바탕으로 더 나은 선택을 만드는 데서 성취감을 느낍니다.</p>
+            <p>최근에는 LLM과 RAG에 관심이 많고, 배운 내용을 실제 업무와 프로젝트에 어떻게 연결할지 계속 실험하며 기록하고 있습니다.</p>
+          </div>
+
+        </div>
+
+        <div class="hero-side">
+          <div class="hero-avatar-frame">
+            <img src="{{ site.author.avatar }}" alt="{{ site.author.name }} GitHub 프로필 이미지" loading="lazy" />
+          </div>
+          <div class="hero-actions hero-actions-side">
+            <a class="btn btn-brand" href="{{ '/blog/' | relative_url }}">블로그 글 보기</a>
+            <a class="btn btn-ghost" href="{{ site.social.github }}" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">일하는 방식</span>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="bi bi-layout-text-window-reverse" aria-hidden="true"></i>
+          </div>
+          <h3>관점의 차이를 이해하기</h3>
+          <p>직군과 역할마다 문제를 바라보는 방식이 다르다는 점을 이해하고, 그 차이에서 더 나은 선택 기준을 찾으려 합니다.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="bi bi-bezier2" aria-hidden="true"></i>
+          </div>
+          <h3>배운 것을 적용해보기</h3>
+          <p>교육, 기술 스터디, 사이드 프로젝트에서 얻은 관점을 실제 업무나 구현 문제에 다시 적용해보는 과정을 중요하게 생각합니다.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+          </div>
+          <h3>기록을 통해 연결하기</h3>
+          <p>실무 경험과 학습 기록을 따로 두지 않고, 블로그에 함께 정리해 다음 판단과 구현에 다시 연결합니다.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell muted-surface" id="stack">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">기술 스택</span>
+    </div>
+
+    <div class="stack-groups">
+      <article class="stack-showcase reveal">
+        <h3>Backend</h3>
+        <img src="https://skillicons.dev/icons?i=java,spring,python" alt="Backend skill icons: Java, Spring, Python" loading="lazy" />
+        <p class="stack-caption">Java, Spring, Python 중심으로 서비스 로직과 API를 구현합니다.</p>
+      </article>
+      <article class="stack-showcase reveal">
+        <h3>Database</h3>
+        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,redis" alt="Database skill icons: MySQL, PostgreSQL, MongoDB, Redis" loading="lazy" />
+        <p class="stack-caption">관계형 DB와 캐시를 함께 고려해 데이터 흐름을 설계합니다.</p>
+      </article>
+      <article class="stack-showcase reveal">
+        <h3>Infra / DevOps</h3>
+        <img src="https://skillicons.dev/icons?i=aws,docker,nginx,githubactions,linux,git" alt="Infra skill icons: AWS, Docker, Nginx, GitHub Actions, Linux, Git" loading="lazy" />
+        <p class="stack-caption">배포와 운영 자동화를 포함해 서비스가 돌아가는 전체 흐름을 봅니다.</p>
+      </article>
+      <article class="stack-showcase reveal">
+        <h3>AI / Media</h3>
+        <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,fastapi" alt="AI skill icons: TensorFlow, PyTorch, FastAPI" loading="lazy" />
+        <p class="stack-caption">AI 기능을 실시간 미디어 파이프라인 안에 녹여 서비스 단위로 연결합니다.</p>
+      </article>
+    </div>
+
+    <div class="tag-cloud-card reveal">
+      <h3>LLM / RAG 관심 키워드</h3>
+      <div class="tag-row">
+        <span class="tag">LangChain</span>
+        <span class="tag">RAG</span>
+        <span class="tag">HuggingFace</span>
+        <span class="tag">Vector DB</span>
+        <span class="tag">Embeddings</span>
+        <span class="tag">Prompt Engineering</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell" id="experience">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">경력</span>
+    </div>
+
+    <div class="experience-timeline">
+      <article class="experience-card reveal">
+        <div class="experience-head">
+          <div>
+            <h3>영상 솔루션 도메인 · AI / 백엔드 개발자</h3>
+            <p>2025.07 ~ 재직중</p>
+          </div>
+          <span class="article-category">Realtime · AI</span>
+        </div>
+        <ul class="project-points">
+          <li>관제 시스템 기능 개발</li>
+          <li>HLS 기반 멀티 스트리밍 구조 설계</li>
+          <li>FFmpeg 인코딩 옵션 최적화</li>
+          <li>YOLO 기반 얼굴 블러 처리 구현</li>
+          <li>ResNet 기반 비명 감지 모델 실험</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell muted-surface" id="projects">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">문제 해결 경험</span>
+    </div>
+
+    <div class="project-stack">
+      <details class="project-case note-card reveal" open name="project-cases">
+        <summary>
+          <div class="project-case-summary">
+            <div class="project-case-head">
+              <span class="project-tag">Realtime Vision</span>
+              <h3>WebRTC 기반 실시간 비전 파이프라인 최적화 사례</h3>
+              <p class="body-copy">WebRTC ABR 환경에서 해상도 변동으로 인한 파이프라인 오류를 해결하고 실시간 영상 처리 안정성을 확보한 사례입니다.</p>
+              <div class="tag-row">
+                <span class="tag">WebRTC</span>
+                <span class="tag">FFmpeg</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">FastAPI</span>
+              </div>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <div class="education-block">
+            <h4>배경 및 문제 상황</h4>
+            <p class="body-copy">기존 RTSP 입력 스트림 파이프라인은 입력 해상도가 항상 일정하다는 전제로 설계되었습니다. 그러나 실제 운영 환경인 WebRTC의 적응형 비트레이트(ABR) 조건에서는 네트워크 대역폭에 따라 해상도가 실시간으로 변동되었습니다. 이로 인해 FFmpeg swscaler 에러(Slice parameters invalid), 프레임 버퍼 꼬임, 화면 깨짐 및 누적 지연이 발생하여 실시간 관제 시스템의 가용성이 저하되는 문제를 마주했습니다.</p>
+          </div>
+
+          <div class="education-block">
+            <h4>해결 과제 및 수행 내용</h4>
+            <ul class="project-points">
+              <li>모든 가변 입력 프레임을 OpenCV Letterbox 알고리즘을 거쳐 1280x720 규격으로 강제 정규화해 후속 AI 추론 모델과 송출 레이어에 전달되는 데이터의 정합성을 확보</li>
+              <li>FastAPI 기반의 별도 제어 API를 구축하여 스트림 상태를 실시간 모니터링하고, 해상도 변경 시 프로세스 전체 중단 없이 안전하게 설정을 갱신하거나 재연결할 수 있도록 아키텍처 개선</li>
+              <li>FFmpeg의 `zerolatency` 옵션과 입력 FPS 변화에 연동되는 동적 GOP 설정을 적용해 타임스탬프 동기화 오류를 해소하고, 누적 지연 시간을 기존 대비 30% 이상 개선</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>성과 및 핵심 역량</h4>
+            <p class="body-copy">가변적인 네트워크 환경에서도 24시간 중단 없는 실시간 비전 시스템의 안정성을 확보했습니다. 이 과정에서 단순 기능 구현을 넘어, 실시간 시스템의 예외 처리 전략과 변동성에 대응하는 유연한 백엔드 아키텍처 설계 역량을 증명했습니다.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-case note-card reveal" name="project-cases">
+        <summary>
+          <div class="project-case-summary">
+            <div class="project-case-head">
+              <span class="project-tag">Streaming</span>
+              <h3>HLS 기반 다중 영상 동기화 스트리밍 파이프라인 구축</h3>
+              <p class="body-copy">대용량 영상 다중 재생 시 발생하는 초기 지연과 버퍼링 문제를 해결하고 1초 미만 Seek 지연을 달성한 사례입니다.</p>
+              <div class="tag-row">
+                <span class="tag">HLS</span>
+                <span class="tag">FFmpeg</span>
+                <span class="tag">Streaming</span>
+                <span class="tag">Encoding</span>
+              </div>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <div class="education-block">
+            <h4>배경 및 기술 선택의 이유</h4>
+            <p class="body-copy">가변적인 개수의 대용량 영상(CAM 데이터, 파일당 약 928MB)을 웹 브라우저에서 동시 재생하고 제어해야 하는 요구사항이 있었습니다. 기존 단일 MP4 방식은 전체 파일을 로딩해야 하므로 5개 이상의 영상을 동시 로드할 때 초기 지연과 버퍼링이 심각했습니다. 이를 해결하기 위해 영상을 작은 조각으로 나누어 전송하는 HLS(HTTP Live Streaming) 프로토콜을 채택했습니다. HLS는 세그먼트 단위 로딩을 통해 초기 로딩 속도를 높이고, 네트워크 상황에 유연하게 대응할 수 있어 다중 영상 동기화에 가장 적합한 선택이었습니다.</p>
+          </div>
+
+          <div class="education-block">
+            <h4>기술적 도전 및 해결 과정</h4>
+            <ul class="project-points">
+              <li>변환 속도가 빠른 Codec Copy 방식(약 12초)과 정밀한 제어가 가능한 Re-encode 방식(약 75초)을 비교 실험해, 사용자 경험을 위해 Re-encode 방식을 최종 채택</li>
+              <li>기존 Python Worker 방식의 높은 CPU 부담과 동시 처리 제한 문제를 해결하기 위해 Java 기반 서비스로 리팩토링하고, Semaphore를 도입해 서버 자원 상황에 맞게 동시 인코딩 개수를 제한</li>
+              <li>`-sc_threshold 0`, `-g 120` 등 FFmpeg 옵션을 적용해 세그먼트 경계와 키프레임을 정렬하고, Seek 조작 시 모든 영상이 오차 없이 동일한 시점을 표시하도록 구현</li>
+              <li>AWS MediaConvert 등 클라우드 솔루션을 검토하되 지속적인 대용량 영상 처리 비용을 고려해, 서비스 규모와 예산에 맞는 현실적인 아키텍처를 설계</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>성과 및 핵심 역량</h4>
+            <p class="body-copy">GB 단위의 고화질 영상 5개를 동시에 로드하고, 10초 전후 이동이나 재생/정지 같은 제어를 1초 미만의 지연으로 수행하는 동기화 플레이어 환경을 구축했습니다. 성능 테스트를 통해 얻은 구체적인 데이터(초기 로딩 시간, 세그먼트 크기 등)를 근거로 최적의 인코딩 전략을 수립하는 미디어 백엔드 역량을 확보했습니다.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-case note-card reveal" name="project-cases">
+        <summary>
+          <div class="project-case-summary">
+            <div class="project-case-head">
+              <span class="project-tag">MSA · Observability</span>
+              <h3>MSA 기반 스마트 오피스 통합 인프라 및 관측 지표 설계</h3>
+              <p class="body-copy">분산 환경에서 설정 불일치와 장애 추적 어려움을 해결하기 위해 TraceId 기반 로그 모듈과 ELK 관측 체계를 구축한 사례입니다.</p>
+              <div class="tag-row">
+                <span class="tag">Spring Cloud</span>
+                <span class="tag">ELK</span>
+                <span class="tag">MSA</span>
+                <span class="tag">Observability</span>
+              </div>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <div class="education-block">
+            <h4>기술적 페인 포인트</h4>
+            <p class="body-copy">8인의 개발자가 가변적인 서비스들을 개발하면서, 로컬 환경의 설정이 배포 환경에 반영되지 않아 발생하는 런타임 에러가 반복되었습니다. 특히 서비스 간 호출 시 어느 구간에서 지연이나 실패가 발생하는지 알 수 없는 분산 시스템의 비가시성 문제가 시스템 안정성의 최대 걸림돌이었습니다.</p>
+          </div>
+
+          <div class="education-block">
+            <h4>엔지니어링 가설 및 설계 방향</h4>
+            <ul class="project-points">
+              <li>TraceId를 전파하고 로그 규격을 모듈화해 라이브러리 형태로 강제하면 전체 서비스의 호출 흐름을 단일 타임라인으로 시각화할 수 있을 것이라고 가정</li>
+              <li>설정 정보를 코드화하여 외부 주입(Config Server) 방식으로 단일화하면 환경 불일치로 인한 장애를 원천 차단하고, 결정론적 배포가 가능하다고 판단</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>실험 및 기술적 검증 과정</h4>
+            <ul class="project-points">
+              <li>TraceId 생성과 `response_time` 계산을 포함하는 AOP 공통 로그 모듈을 직접 설계하고, JitPack 기반 라이브러리로 배포해 모든 서비스가 동일한 형식의 로그를 남기도록 통일</li>
+              <li>ELK 파이프라인을 구축하고, 컨테이너 간 TZ 동기화와 Logstash 필터 튜닝을 통해 Kibana에서 1ms 단위 요청 흐름 추적이 가능하도록 검증</li>
+              <li>Spring Cloud Config와 GitHub Actions 기반으로 민감 정보와 환경 변수를 중앙 관리하고, 어떤 서비스든 동일한 배포 파이프라인을 타도록 표준화</li>
+              <li>쾌적도 측정 AI 모델이 수집된 환경 데이터를 실시간으로 처리할 수 있도록 인프라 레이어에 통합하고, AI 연산 부하가 전체 파이프라인 지연에 미치는 영향을 함께 모니터링</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>결과 및 성과</h4>
+            <p class="body-copy">장애 발생 시 각 서버 로그 파일을 수동 탐색하던 방식을 TraceId 기반 중앙 검색으로 바꾸어 평균 장애 분석 시간(MTTR)을 80% 이상 단축했습니다. 인프라 총괄로서 개별 개발자가 인프라 설정이 아닌 비즈니스 로직에만 집중할 수 있는 공통 인프라 레이어를 제공하는 성과를 거두었습니다.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-case note-card reveal" name="project-cases">
+        <summary>
+          <div class="project-case-summary">
+            <div class="project-case-head">
+              <span class="project-tag">AI Service</span>
+              <h3>실시간 AI 서비스 파이프라인 E2E 설계 및 상용화</h3>
+              <p class="body-copy">기존 영상 관제 솔루션에 AI 기능을 도입하며 데이터 수집부터 모델 학습, 실시간 서빙, 운영 제어까지 전 과정을 단독 주도한 사례입니다.</p>
+              <div class="tag-row">
+                <span class="tag">ResNet</span>
+                <span class="tag">FFT</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">WandB</span>
+              </div>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <div class="education-block">
+            <h4>기술적 문제 정의</h4>
+            <p class="body-copy">기존 영상 관제(VMS) 솔루션에 최초로 AI 기능을 도입하는 과정에서, 단순히 모델을 이식하는 수준을 넘어 실시간 환경의 변동성을 제어하는 서비스 파이프라인 구축이 필요했습니다. 특히 네트워크 대역폭에 따른 스트림의 불안정성과 현장 소음으로 인한 모델 성능 저하를 함께 해결하고, 9개 이상의 스트림을 동시에 처리할 수 있는 운영 표준을 수립하는 것을 목표로 삼았습니다. 데이터 수집, 모델링, 전처리, 실시간 서빙 파이프라인 설계, 운영 제어 API 구축에 이르는 전 과정을 단독 주도했습니다.</p>
+          </div>
+
+          <div class="education-block">
+            <h4>기술적 고민과 실험적 검증</h4>
+            <ul class="project-points">
+              <li>학습 데이터와 실제 현장 환경 간 분포 차이를 줄이기 위해 현장 데이터를 직접 수집하고, FFT 기반 특징 추출 로직과 Noise Injection을 적용한 ResNet 18/34 기반 비명 감지 모델을 구축</li>
+              <li>WandB 기반 실험 관리로 하이퍼파라미터 변화에 따른 지연 시간과 오탐률의 상관관계를 검증하며 운영 가능한 최적의 모델 선택</li>
+              <li>WebRTC의 적응형 비트레이트 특성상 해상도가 수시로 변하며 OpenCV 후처리 로직이 중단되는 문제를 해결하기 위해 모든 프레임을 Letterbox 알고리즘으로 정규화하고, YOLO 입력 규격을 고정</li>
+              <li>AI 모듈을 독립화해 특정 모델의 연산 병목이나 장애가 전체 스트림으로 전이되지 않도록 재설계하고, FastAPI 기반 제어 API를 구축해 설정 변경과 스트림 재시작을 런타임에 제어할 수 있는 운영 가시성 체계 마련</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>성과 및 핵심 역량</h4>
+            <p class="body-copy">얼굴 블러 기능은 차기 솔루션 정식 버전에 반영되었고, 비명 감지 모델은 스마트 규제 샌드박스 사업에 적용되어 실제 납품 성과로 이어졌습니다. 데이터 수집부터 모델 학습, 실시간 스트리밍 최적화, 운영 지표 설계까지 전 과정을 주도하며 AI를 단독 기능이 아닌 지속 가능한 서비스로 완성하는 MLOps형 엔지니어링 역량을 확보했습니다.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">최근 글</span>
+      <p>기초 개념 정리, 프로젝트 기록, 트러블슈팅 메모를 카테고리별로 쌓고 있습니다.</p>
+    </div>
+
+    {% if site.posts.size > 0 %}
+      <div class="row g-4">
+        {% for post in site.posts limit:3 %}
+          <div class="col-lg-4 col-md-6">
+            {% include post-card.html post=post %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state home-empty-state">
+        <i class="bi bi-journal-text" aria-hidden="true"></i>
+        <h3>첫 게시글을 기다리고 있어요.</h3>
+        <p>이제부터 작성하는 글이 여기에 최신순으로 표시됩니다.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section-shell muted-surface" id="education">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">교육 · 과정</span>
+    </div>
+
+    <div class="education-stack">
+      <details class="education-card note-card reveal">
+        <summary>
+          <div class="education-summary">
+            <div>
+              <h3>NHN 아카데미 AIOT 2기</h3>
+              <p class="body-copy">2024.09.01 ~ 2025.06.13 · 수료</p>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <p class="body-copy">
+            팀 프로젝트로
+            <a href="https://github.com/Pangyo-Coffee-Legends" target="_blank" rel="noreferrer">Pangyo Coffee Legends</a>
+            를 진행했고, 데이터 흐름부터 운영 환경까지 전주기를 경험했습니다.
+          </p>
+
+          <div class="education-block">
+            <h4>쾌적 지표 산출을 위한 군집 모델링</h4>
+            <ul class="project-points">
+              <li>온도, 습도, CO2 농도 데이터를 기반으로 K-means 클러스터링 수행</li>
+              <li>수집된 센서 데이터를 사전 정제하고, EDA를 통해 군집 간 차별적 특성 도출</li>
+              <li>이를 바탕으로 `쾌적-불쾌` 등급 지표를 설정하고 시각화 자료 기획</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>FastAPI 기반 데이터 처리 파이프라인 구축</h4>
+            <ul class="project-points">
+              <li>실시간 센서 데이터를 수신 및 전처리하는 비동기 API 구조 설계</li>
+              <li>MQTT와 InfluxDB 연동 구간 병목을 줄이기 위해 중간 처리 서비스(`Data-Processor-Service`) 직접 구현</li>
+              <li>연결 안정성과 처리 지연 최소화를 위한 로직 최적화 적용</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>운영 · 관제 아키텍처 설계 및 DevOps 적용</h4>
+            <ul class="project-points">
+              <li>Docker 기반 마이크로서비스 컨테이너화</li>
+              <li>EFK(Filebeat, Elasticsearch, Fluent Bit/Kibana 계열) 기반 중앙 로그 수집 및 대시보드 구성 경험</li>
+              <li>Git 기반 CI/CD 자동화와 Spring 공통 환경 설정 정리</li>
+            </ul>
+          </div>
+
+          <p class="body-copy">
+            K-means 기반 쾌적 지표 모델링, EDA, FastAPI 파이프라인 구축, MQTT/InfluxDB 연동 안정화, 로그 시스템 설계, CI/CD 자동화와 Spring 환경 구성까지 경험하며 데이터 처리와 운영을 하나의 흐름으로 다뤄보았습니다.
+          </p>
+        </div>
+      </details>
+
+      <details class="education-card note-card reveal">
+        <summary>
+          <div class="education-summary">
+            <div>
+              <h3>모두의연구소 재직자 AI/LLM 서비스 개발 과정</h3>
+              <p class="body-copy">2026.03.12 ~ 현재 · 진행중</p>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <p class="body-copy">
+            아직 상세 이력을 정리하는 중입니다. 현재는 LLM 애플리케이션 구조, RAG 품질, 프롬프트 설계, 실서비스 관점의 AI 기능 연결 방식을 중심으로 학습하고 있습니다.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell" id="contact">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow eyebrow-section">링크</span>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-3">
+        <a class="contact-card reveal" href="mailto:{{ site.social.email }}">
+          <i class="bi bi-envelope-paper-fill" aria-hidden="true"></i>
+          <strong>Email</strong>
+          <span>{{ site.social.email }}</span>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="contact-card reveal" href="{{ site.social.github }}" target="_blank" rel="noreferrer">
+          <i class="bi bi-github" aria-hidden="true"></i>
+          <strong>GitHub</strong>
+          <span>{{ site.social.github | replace: 'https://', '' }}</span>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="contact-card reveal" href="{{ site.social.team_project }}" target="_blank" rel="noreferrer">
+          <i class="bi bi-people-fill" aria-hidden="true"></i>
+          <strong>Team Project</strong>
+          <span>Pangyo Coffee Legends</span>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="contact-card reveal" href="{{ '/blog/' | relative_url }}">
+          <i class="bi bi-pencil-square" aria-hidden="true"></i>
+          <strong>Tech Blog</strong>
+          <span>기술 글 전체 보기</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+{% assign project = include.project %}
+<article class="project-card reveal">
+  <div class="project-top">
+    <span class="project-tag">{{ project.category }}</span>
+    <i class="bi {{ project.icon | default: 'bi-window-stack' }}" aria-hidden="true"></i>
+  </div>
+  <h3>{{ project.title }}</h3>
+  <p>{{ project.summary }}</p>
+  {% if project.stack %}
+    <div class="tag-row">
+      {% for item in project.stack %}
+        <span class="tag">{{ item }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if project.highlights %}
+    <ul class="project-points">
+      {% for item in project.highlights limit:2 %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <a class="project-link" href="{{ project.url | relative_url }}">
+    프로젝트 상세 보기
+    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+  </a>
+</article>

@@ -1,0 +1,71 @@
+---
+layout: default
+title: 기술블로그
+description: Jekyll 기반 기술 블로그 목록 페이지
+nav_key: blog
+permalink: /blog/
+page_scripts:
+  - /assets/js/blog.js
+---
+{% assign categories = "Study|프로젝트|issue|정보|잡담" | split: "|" %}
+
+<section class="section-shell muted-surface" id="blogIndex">
+  <div class="container">
+    <div class="blog-layout">
+      <aside class="blog-sidebar reveal is-visible">
+        <div class="blog-sidebar-card">
+          <div class="section-heading section-heading-tight">
+            <span class="eyebrow">카테고리</span>
+            <h2>기술 블로그</h2>
+          </div>
+
+          <label class="search-shell" for="searchPosts">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input
+              id="searchPosts"
+              type="search"
+              placeholder="제목, 요약, 태그 검색"
+              aria-label="글 검색"
+            />
+          </label>
+
+          <div class="sidebar-filters" id="categoryFilters" aria-label="카테고리 필터">
+            <button type="button" class="category-filter active" data-category="All">
+              <span>All</span>
+              <span>{{ site.posts | size }}</span>
+            </button>
+            {% for category in categories %}
+              {% assign category_posts = site.posts | where: "category", category %}
+              <button type="button" class="category-filter" data-category="{{ category }}">
+                <span>{{ category }}</span>
+                <span>{{ category_posts | size }}</span>
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+      </aside>
+
+      <div class="blog-main">
+        <div class="section-heading reveal is-visible section-heading-compact">
+          <span class="eyebrow eyebrow-section">전체 글</span>
+        </div>
+
+        <div class="row g-4" id="postGrid">
+          {% for post in site.posts %}
+            <div class="col-lg-6 col-md-6 js-post-item">
+              {% include post-card.html post=post %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="pagination-shell" id="postPagination" aria-label="글 목록 페이지 이동"></div>
+
+        <div class="empty-state d-none" id="emptyState">
+          <i class="bi bi-inboxes-fill" aria-hidden="true"></i>
+          <h3>조건에 맞는 글이 아직 없어요.</h3>
+          <p>검색어나 카테고리를 다시 바꿔보세요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

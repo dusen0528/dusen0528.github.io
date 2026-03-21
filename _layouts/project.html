@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section class="section-shell">
+  <div class="container article-shell">
+    <a class="back-link reveal is-visible" href="{{ '/#projects' | relative_url }}">
+      <i class="bi bi-arrow-left" aria-hidden="true"></i>
+      홈으로 돌아가기
+    </a>
+
+    <header class="article-header reveal is-visible">
+      <span class="article-category">{{ page.category }}</span>
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}
+        <p class="article-summary">{{ page.summary }}</p>
+      {% endif %}
+      {% if page.stack %}
+        <div class="tag-row">
+          {% for item in page.stack %}
+            <span class="tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+
+    <article class="article-body reveal is-visible">
+      {{ content }}
+    </article>
+  </div>
+</section>

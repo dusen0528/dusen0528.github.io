@@ -1,0 +1,57 @@
+title: 최인호 Portfolio
+brand_name: 최인호 · Portfolio
+email: dusen3846@gmail.com
+description: >-
+  교육, 기술 스터디, 사이드 프로젝트에서 얻은 관점을 실무와 프로젝트에 연결하며 기록하는 백엔드 · AI 엔지니어 최인호의 기술 블로그
+baseurl: ""
+url: ""
+lang: ko-KR
+timezone: Asia/Seoul
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+theme_color: "#1b5e39"
+
+author:
+  name: 최인호
+  role: Backend · AI Engineer
+  intro: 교육, 기술 스터디, 사이드 프로젝트를 병행하며 다양한 분야의 관점을 실무와 프로젝트에 연결하는 백엔드 · AI 엔지니어입니다.
+  focus: 최근에는 LLM과 RAG에 관심이 많고, 교육 · 기술 스터디 · 사이드 프로젝트를 병행하며 다양한 관점을 실제 업무와 프로젝트에 적용해보는 흐름을 중요하게 생각합니다
+  avatar: https://github.com/dusen0528.png
+
+social:
+  github: https://github.com/dusen0528
+  email: dusen3846@gmail.com
+  team_project: https://github.com/Pangyo-Coffee-Legends
+  github_activity: https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=dusen0528&theme=tokyonight
+  git_animals: https://render.gitanimals.org/farms/dusen0528
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav_key: blog
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      nav_key: projects
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - vendor
