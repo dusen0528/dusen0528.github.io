@@ -1298,7 +1298,10 @@ select {
 
 @media (max-width: 575px) {
   .hero-title {
-    max-width: 10ch;
+    max-width: none;
+    font-size: clamp(1.65rem, 7.2vw, 2.05rem);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
   }
 
   .navbar-brand span:last-child {
