@@ -230,8 +230,13 @@ select {
   line-height: 1.04;
 }
 
-.hero-title span {
-  display: block;
+.hero-title-prefix,
+.hero-title-role,
+.hero-title-name {
+  display: inline;
+}
+
+.hero-title-name {
   color: var(--primary);
 }
 
@@ -1302,6 +1307,19 @@ select {
     font-size: clamp(1.65rem, 7.2vw, 2.05rem);
     line-height: 1.12;
     letter-spacing: -0.03em;
+    display: grid;
+    gap: 0.12rem;
+  }
+
+  .hero-title-prefix {
+    display: block;
+  }
+
+  .hero-title-role {
+    display: block;
+    font-size: 0.68em;
+    line-height: 1.18;
+    white-space: nowrap;
   }
 
   .navbar-brand span:last-child {
