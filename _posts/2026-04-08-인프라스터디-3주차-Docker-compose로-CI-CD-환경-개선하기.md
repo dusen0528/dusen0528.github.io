@@ -168,7 +168,7 @@ SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-example}
 즉 백엔드는 DB를 찾기 위해 `localhost`를 보지 않고,  
 같은 Docker 네트워크 안의 `postgres` 컨테이너를 이름으로 찾아간다.
 
-이 부분이 재미있었던 이유는,  
+이 부분이 재미있는 이유는,  
 앞서 네트워크를 공부할 때 보았던 DNS 개념과 비슷하게  
 "이름으로 상대를 식별한다"는 흐름이 로컬 컨테이너 환경에도 적용되기 때문이다.
 
@@ -346,7 +346,7 @@ Compose는 이런 점검을 사전에 자동화하기 좋은 형태로 제공한
 
 ---
 
-## 보충하기. 실제 프로젝트에서 빌드 전후 테스트를 어떻게 붙이고 있었는가
+## 보충하기. 실제 프로젝트에서 빌드 전후 테스트를 어떻게 붙이고 있는가
 
 실제로는 Compose 파일만 있는 것이 아니라 빌드와 배포 전후를 검증하는 스크립트도 따로 만들었다.
 
@@ -383,7 +383,7 @@ pnpm test
 
 ### 2. 프론트엔드에서 실제 사용하는 빌드/테스트 명령
 
-`frontend/package.json`을 보면 실제 스크립트는 아래처럼 정의되어 있었다.
+`frontend/package.json`을 보면 실제 스크립트는 아래처럼 정의되어 있다.
 
 ```json
 "build": "next build --webpack",
@@ -432,7 +432,7 @@ lint
 
 ### 4. 배포 스크립트도 단순 `up -d`는 아니다!
 
-프로젝트에는 서비스별 배포 스크립트도 따로 있었다.
+프로젝트에는 서비스별 배포 스크립트도 따로 있다.
 
 - `/Users/inho/Desktop/han/scripts/deploy/backend-deploy.sh`
 - `/Users/inho/Desktop/han/scripts/deploy/frontend-deploy.sh`
