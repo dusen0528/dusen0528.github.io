@@ -24,6 +24,10 @@ featured: false
 
 ## 이번에 본 Docker Compose 구성
 
+먼저 서비스 아키텍처는 다음과 같다.
+
+![아키텍처이미지](/image/0408_infra_architecture.png)
+
 예시 구성은 크게 세 서비스로 나뉜다.
 
 - `postgres`: 데이터 저장을 담당하는 DB 컨테이너
@@ -90,7 +94,9 @@ volumes:
 
 ---
 
-## 이 파일을 읽을 때 먼저 봐야 하는 것
+## 설정 파일 분석하기
+
+![서비스 기동 순서](/image/0408_infra_service_run_process.png)
 
 처음에는 설정이 길어 보여도, 인프라 관점에서는 아래 네 가지를 먼저 보면 구조가 잘 보인다.
 
@@ -279,10 +285,12 @@ test:
 
 ---
 
-## 6. 이 구성이 왜 CI/CD 환경 개선과 연결될까
+## 6. CI/CD 환경
 
 처음에는 Compose가 로컬 개발용 도구처럼 보이지만,  
 실제로는 CI/CD 환경을 더 안정적으로 만드는 데도 도움이 된다.
+
+![CI파이프라인](/image/0408_infra_CI_pipeline.png)
 
 ### 1) 환경 재현성이 좋아진다
 
@@ -430,6 +438,8 @@ lint
 - `/Users/inho/Desktop/han/scripts/deploy/frontend-deploy.sh`
 
 이 스크립트들은 공통적으로 아래 흐름을 가진다.
+
+![아키텍처이미지](/image/0408_infra_rollback.png)
 
 ```text
 1. 현재 컨테이너의 이전 이미지 확인
