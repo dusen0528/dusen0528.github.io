@@ -85,22 +85,26 @@ nav_key: home
     <div class="stack-groups">
       <article class="stack-showcase reveal">
         <h3>Backend</h3>
-        <img src="https://skillicons.dev/icons?i=java,spring,python" alt="Backend skill icons: Java, Spring, Python" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=java,spring,python" alt="Backend skill icons: Java, Spring, Python"
+          loading="lazy" />
         <p class="stack-caption">Java, Spring, Python 중심으로 서비스 로직과 API를 구현합니다.</p>
       </article>
       <article class="stack-showcase reveal">
         <h3>Database</h3>
-        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,redis" alt="Database skill icons: MySQL, PostgreSQL, MongoDB, Redis" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,redis"
+          alt="Database skill icons: MySQL, PostgreSQL, MongoDB, Redis" loading="lazy" />
         <p class="stack-caption">관계형 DB와 캐시를 함께 고려해 데이터 흐름을 설계합니다.</p>
       </article>
       <article class="stack-showcase reveal">
         <h3>Infra / DevOps</h3>
-        <img src="https://skillicons.dev/icons?i=aws,docker,nginx,githubactions,linux,git" alt="Infra skill icons: AWS, Docker, Nginx, GitHub Actions, Linux, Git" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=aws,docker,nginx,githubactions,linux,git"
+          alt="Infra skill icons: AWS, Docker, Nginx, GitHub Actions, Linux, Git" loading="lazy" />
         <p class="stack-caption">배포와 운영 자동화를 포함해 서비스가 돌아가는 전체 흐름을 봅니다.</p>
       </article>
       <article class="stack-showcase reveal">
         <h3>AI / Media</h3>
-        <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,fastapi" alt="AI skill icons: TensorFlow, PyTorch, FastAPI" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,fastapi"
+          alt="AI skill icons: TensorFlow, PyTorch, FastAPI" loading="lazy" />
         <p class="stack-caption">AI 기능을 실시간 미디어 파이프라인 안에 녹여 서비스 단위로 연결합니다.</p>
       </article>
     </div>
@@ -129,17 +133,17 @@ nav_key: home
       <article class="experience-card reveal">
         <div class="experience-head">
           <div>
-            <h3>영상 솔루션 도메인 · AI / 백엔드 개발자</h3>
-            <p>2025.07 ~ 재직중</p>
+            <h3>영상 관제 솔루션 도메인 · AI / 백엔드 개발자</h3>
+            <p>2025.07.01 ~ 재직중</p>
           </div>
-          <span class="article-category">Realtime · AI</span>
+          <span class="article-category">VMS · Realtime AI</span>
         </div>
         <ul class="project-points">
-          <li>관제 시스템 기능 개발</li>
-          <li>HLS 기반 멀티 스트리밍 구조 설계</li>
-          <li>FFmpeg 인코딩 옵션 최적화</li>
-          <li>YOLO 기반 얼굴 블러 처리 구현</li>
-          <li>ResNet 기반 비명 감지 모델 실험</li>
+          <li>Spring MVC + JSP 기반 영상 관제 시스템의 기능 개발과 유지보수 수행</li>
+          <li>YOLO 기반 실시간 얼굴 블러 기능을 도입해 9채널 이상, 24시간 무중단 운영 검증 완료</li>
+          <li>ResNet18 기반 비명 감지 파이프라인을 설계해 정확도 95.22%, 특이도 95.97%, 재현율 92.92% 달성</li>
+          <li>HLS 기반 대용량 멀티 스트리밍 구조를 설계해 5개 고화질 영상 동시 로드와 1초 미만 제어 지연 환경 구축</li>
+          <li>Swagger, APIDOG, GitLab CI/CD 활용으로 개발 및 운영 흐름 개선</li>
         </ul>
       </article>
     </div>
@@ -157,11 +161,12 @@ nav_key: home
         <summary>
           <div class="project-case-summary">
             <div class="project-case-head">
-              <span class="project-tag">Realtime Vision</span>
-              <h3>WebRTC 기반 실시간 비전 파이프라인 최적화 사례</h3>
-              <p class="body-copy">WebRTC ABR 환경에서 해상도 변동으로 인한 파이프라인 오류를 해결하고 실시간 영상 처리 안정성을 확보한 사례입니다.</p>
+              <span class="project-tag">Privacy AI</span>
+              <h3>실시간 얼굴 블러 기능 최초 도입 및 상용화 검증</h3>
+              <p class="body-copy">WebRTC 적응형 비트레이트 환경의 해상도 변동 문제를 해결해 얼굴 블러 기능을 9채널 이상, 24시간 무중단으로 검증한 사례입니다.</p>
               <div class="tag-row">
                 <span class="tag">WebRTC</span>
+                <span class="tag">YOLO</span>
                 <span class="tag">FFmpeg</span>
                 <span class="tag">OpenCV</span>
                 <span class="tag">FastAPI</span>
@@ -173,22 +178,66 @@ nav_key: home
 
         <div class="education-body">
           <div class="education-block">
-            <h4>배경 및 문제 상황</h4>
-            <p class="body-copy">기존 RTSP 입력 스트림 파이프라인은 입력 해상도가 항상 일정하다는 전제로 설계되었습니다. 그러나 실제 운영 환경인 WebRTC의 적응형 비트레이트(ABR) 조건에서는 네트워크 대역폭에 따라 해상도가 실시간으로 변동되었습니다. 이로 인해 FFmpeg swscaler 에러(Slice parameters invalid), 프레임 버퍼 꼬임, 화면 깨짐 및 누적 지연이 발생하여 실시간 관제 시스템의 가용성이 저하되는 문제를 마주했습니다.</p>
+            <h4>문제 상황</h4>
+            <p class="body-copy">기존 영상 관제 솔루션에는 AI 기반 개인정보 보호 기능이 없었고, WebRTC 적응형 비트레이트 환경에서는 입력 해상도가 실시간으로 변해 프레임 깨짐,
+              버퍼 꼬임, 누적 지연이 반복되었습니다. 이 때문에 실시간 얼굴 블러 기능을 안정적으로 서비스하기 어려웠습니다.</p>
           </div>
 
           <div class="education-block">
-            <h4>해결 과제 및 수행 내용</h4>
+            <h4>해결 방식</h4>
             <ul class="project-points">
-              <li>모든 가변 입력 프레임을 OpenCV Letterbox 알고리즘을 거쳐 1280x720 규격으로 강제 정규화해 후속 AI 추론 모델과 송출 레이어에 전달되는 데이터의 정합성을 확보</li>
-              <li>FastAPI 기반의 별도 제어 API를 구축하여 스트림 상태를 실시간 모니터링하고, 해상도 변경 시 프로세스 전체 중단 없이 안전하게 설정을 갱신하거나 재연결할 수 있도록 아키텍처 개선</li>
-              <li>FFmpeg의 `zerolatency` 옵션과 입력 FPS 변화에 연동되는 동적 GOP 설정을 적용해 타임스탬프 동기화 오류를 해소하고, 누적 지연 시간을 기존 대비 30% 이상 개선</li>
+              <li>YOLO 기반 얼굴 검출 및 블러 처리 파이프라인을 설계하고, Python 기반 AI 모듈을 독립 구조로 분리해 특정 연산 병목이 전체 스트림에 전이되지 않도록 구성</li>
+              <li>OpenCV Letterbox 기반 입력 정규화 로직을 적용해 해상도가 변해도 FFmpeg와 AI 모델이 항상 고정 규격 입력을 처리하도록 보정</li>
+              <li>FastAPI 기반 제어 API를 구축해 스트림 상태 모니터링, 설정 변경, 재시작 제어를 런타임에서 수행할 수 있게 개선</li>
             </ul>
           </div>
 
           <div class="education-block">
-            <h4>성과 및 핵심 역량</h4>
-            <p class="body-copy">가변적인 네트워크 환경에서도 24시간 중단 없는 실시간 비전 시스템의 안정성을 확보했습니다. 이 과정에서 단순 기능 구현을 넘어, 실시간 시스템의 예외 처리 전략과 변동성에 대응하는 유연한 백엔드 아키텍처 설계 역량을 증명했습니다.</p>
+            <h4>성과</h4>
+            <p class="body-copy">9채널 이상 다중 스트림 환경에서 24시간 무중단 운영 검증을 완료했고, 해당 기능은 차기 솔루션 정식 버전에 반영이 확정되었습니다. 실시간 환경의 변동성을
+              제어하면서 AI 기능을 실제 운영 가능한 구조로 서비스화한 경험입니다.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-case note-card reveal" name="project-cases">
+        <summary>
+          <div class="project-case-summary">
+            <div class="project-case-head">
+              <span class="project-tag">Audio AI</span>
+              <h3>비명 감지 AI 모델 설계 및 운영 체계 구축</h3>
+              <p class="body-copy">현장 소음과 실서비스 제약을 고려해 모델 설계부터 운영 제어 체계까지 구축하고, 서비스 적용 가능한 성능과 처리량을 검증한 사례입니다.</p>
+              <div class="tag-row">
+                <span class="tag">ResNet18</span>
+                <span class="tag">FFT</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">WandB</span>
+              </div>
+            </div>
+            <span class="education-toggle">상세 이력 보기</span>
+          </div>
+        </summary>
+
+        <div class="education-body">
+          <div class="education-block">
+            <h4>문제 상황</h4>
+            <p class="body-copy">현장 환경에서는 엔진 소음, 반사음, 생활 소음 등으로 학습 데이터와 운영 데이터 간 분포 차이가 컸고, 단순 모델 적용만으로는 안정적인 비명 탐지가
+              어려웠습니다. 실서비스에서는 오탐과 미탐 모두 운영 리스크가 되기 때문에 모델 성능과 운영 정책을 함께 설계해야 했습니다.</p>
+          </div>
+
+          <div class="education-block">
+            <h4>해결 방식</h4>
+            <ul class="project-points">
+              <li>FFT 기반 특징 추출, Noise Injection, ResNet18 기반 모델링을 적용해 정확도와 추론 비용의 균형을 검증</li>
+              <li>WandB 기반 실험 관리로 하이퍼파라미터 변화에 따른 성능과 지연 시간을 추적하며 운영 가능한 모델을 선택</li>
+              <li>FastAPI 기반 제어 API를 설계해 스트림 상태, 이벤트 발생 여부, 설정 변경을 실시간으로 제어할 수 있는 운영 체계를 구축</li>
+            </ul>
+          </div>
+
+          <div class="education-block">
+            <h4>성과</h4>
+            <p class="body-copy">총 3,493개 샘플 기준 정확도 95.22%, 특이도 95.97%, 재현율 92.92%를 기록했고, 현실적 활성화 비율 기준 16스트림 환경에서 평균 2초
+              이내 응답과 최대 9스트림 안정 운영 범위를 검증했습니다. 모델링과 서빙을 함께 설계해 실제 서비스 적용 가능한 AI 운영 구조를 구축했습니다.</p>
           </div>
         </div>
       </details>
@@ -198,13 +247,13 @@ nav_key: home
           <div class="project-case-summary">
             <div class="project-case-head">
               <span class="project-tag">Streaming</span>
-              <h3>HLS 기반 다중 영상 동기화 스트리밍 파이프라인 구축</h3>
-              <p class="body-copy">대용량 영상 다중 재생 시 발생하는 초기 지연과 버퍼링 문제를 해결하고 1초 미만 Seek 지연을 달성한 사례입니다.</p>
+              <h3>HLS 기반 대용량 멀티 스트리밍 구조 설계 및 최적화</h3>
+              <p class="body-copy">대용량 CAM 영상을 여러 개 동시에 재생하고 동일 시점으로 제어해야 하는 요구사항을 해결해, 실사용 가능한 멀티 뷰 환경을 구축한 사례입니다.</p>
               <div class="tag-row">
                 <span class="tag">HLS</span>
                 <span class="tag">FFmpeg</span>
-                <span class="tag">Streaming</span>
-                <span class="tag">Encoding</span>
+                <span class="tag">NGINX</span>
+                <span class="tag">Spring MVC</span>
               </div>
             </div>
             <span class="education-toggle">상세 이력 보기</span>
@@ -213,23 +262,26 @@ nav_key: home
 
         <div class="education-body">
           <div class="education-block">
-            <h4>배경 및 기술 선택의 이유</h4>
-            <p class="body-copy">가변적인 개수의 대용량 영상(CAM 데이터, 파일당 약 928MB)을 웹 브라우저에서 동시 재생하고 제어해야 하는 요구사항이 있었습니다. 기존 단일 MP4 방식은 전체 파일을 로딩해야 하므로 5개 이상의 영상을 동시 로드할 때 초기 지연과 버퍼링이 심각했습니다. 이를 해결하기 위해 영상을 작은 조각으로 나누어 전송하는 HLS(HTTP Live Streaming) 프로토콜을 채택했습니다. HLS는 세그먼트 단위 로딩을 통해 초기 로딩 속도를 높이고, 네트워크 상황에 유연하게 대응할 수 있어 다중 영상 동기화에 가장 적합한 선택이었습니다.</p>
+            <h4>문제 상황</h4>
+            <p class="body-copy">IUU 프로젝트에서는 파일당 약 928MB 수준의 CAM 영상을 한 화면에서 여러 개 동시에 재생하고, 같은 시점으로 제어해야 했습니다. 단일 MP4 방식은
+              5개 이상의 영상 동시 로드에서 초기 지연과 버퍼링이 심각해 실사용이 어려웠습니다.</p>
           </div>
 
           <div class="education-block">
-            <h4>기술적 도전 및 해결 과정</h4>
+            <h4>해결 방식</h4>
             <ul class="project-points">
-              <li>변환 속도가 빠른 Codec Copy 방식(약 12초)과 정밀한 제어가 가능한 Re-encode 방식(약 75초)을 비교 실험해, 사용자 경험을 위해 Re-encode 방식을 최종 채택</li>
-              <li>기존 Python Worker 방식의 높은 CPU 부담과 동시 처리 제한 문제를 해결하기 위해 Java 기반 서비스로 리팩토링하고, Semaphore를 도입해 서버 자원 상황에 맞게 동시 인코딩 개수를 제한</li>
-              <li>`-sc_threshold 0`, `-g 120` 등 FFmpeg 옵션을 적용해 세그먼트 경계와 키프레임을 정렬하고, Seek 조작 시 모든 영상이 오차 없이 동일한 시점을 표시하도록 구현</li>
-              <li>AWS MediaConvert 등 클라우드 솔루션을 검토하되 지속적인 대용량 영상 처리 비용을 고려해, 서비스 규모와 예산에 맞는 현실적인 아키텍처를 설계</li>
+              <li>HLS 방식을 직접 검토하고 제안했으며, EC2, S3, CloudFront, MediaConvert 등 여러 아키텍처를 비용과 운영 측면에서 비교한 뒤 EC2 기반 구조를 선택
+              </li>
+              <li>Codec Copy와 Re-encode 방식을 비교 실험하고, 사용자 경험과 탐색 안정성을 위해 Re-encode 방식을 최종 채택</li>
+              <li>Python Worker 방식의 CPU 부담과 동시 처리 한계를 해결하기 위해 Java 기반 서비스로 리팩토링하고, Semaphore로 동시 인코딩 수를 제어</li>
+              <li>FFmpeg 옵션 튜닝과 키프레임 정렬을 통해 Seek 시 여러 영상이 동일한 시점을 오차 없이 표시하도록 개선</li>
             </ul>
           </div>
 
           <div class="education-block">
-            <h4>성과 및 핵심 역량</h4>
-            <p class="body-copy">GB 단위의 고화질 영상 5개를 동시에 로드하고, 10초 전후 이동이나 재생/정지 같은 제어를 1초 미만의 지연으로 수행하는 동기화 플레이어 환경을 구축했습니다. 성능 테스트를 통해 얻은 구체적인 데이터(초기 로딩 시간, 세그먼트 크기 등)를 근거로 최적의 인코딩 전략을 수립하는 미디어 백엔드 역량을 확보했습니다.</p>
+            <h4>성과</h4>
+            <p class="body-copy">고화질 GB 단위 영상 5개를 동시에 로드하고, 최대 6개 멀티 뷰 동기화 재생 환경을 구축했습니다. 10배속, 10초 전후 이동, 재생/정지 제어를 1초
+              미만 지연으로 수행할 수 있는 수준까지 최적화해 실사용 가능한 영상 리뷰 환경을 만들었습니다.</p>
           </div>
         </div>
       </details>
@@ -269,7 +321,7 @@ nav_key: home
           <div class="education-block">
             <h4>실험 및 기술적 검증 과정</h4>
             <ul class="project-points">
-              <li>TraceId 생성과 `response_time` 계산을 포함하는 AOP 공통 로그 모듈을 직접 설계하고, JitPack 기반 라이브러리로 배포해 모든 서비스가 동일한 형식의 로그를 남기도록 통일</li>
+              <li>TraceId 생성과 <code>response_time</code> 계산을 포함하는 AOP 공통 로그 모듈을 직접 설계하고, JitPack 기반 라이브러리로 배포해 모든 서비스가 동일한 형식의 로그를 남기도록 통일</li>
               <li>ELK 파이프라인을 구축하고, 컨테이너 간 TZ 동기화와 Logstash 필터 튜닝을 통해 Kibana에서 1ms 단위 요청 흐름 추적이 가능하도록 검증</li>
               <li>Spring Cloud Config와 GitHub Actions 기반으로 민감 정보와 환경 변수를 중앙 관리하고, 어떤 서비스든 동일한 배포 파이프라인을 타도록 표준화</li>
               <li>쾌적도 측정 AI 모델이 수집된 환경 데이터를 실시간으로 처리할 수 있도록 인프라 레이어에 통합하고, AI 연산 부하가 전체 파이프라인 지연에 미치는 영향을 함께 모니터링</li>
@@ -279,47 +331,6 @@ nav_key: home
           <div class="education-block">
             <h4>결과 및 성과</h4>
             <p class="body-copy">장애 발생 시 각 서버 로그 파일을 수동 탐색하던 방식을 TraceId 기반 중앙 검색으로 바꾸어 평균 장애 분석 시간(MTTR)을 80% 이상 단축했습니다. 인프라 총괄로서 개별 개발자가 인프라 설정이 아닌 비즈니스 로직에만 집중할 수 있는 공통 인프라 레이어를 제공하는 성과를 거두었습니다.</p>
-          </div>
-        </div>
-      </details>
-
-      <details class="project-case note-card reveal" name="project-cases">
-        <summary>
-          <div class="project-case-summary">
-            <div class="project-case-head">
-              <span class="project-tag">AI Service</span>
-              <h3>실시간 AI 서비스 파이프라인 E2E 설계 및 상용화</h3>
-              <p class="body-copy">기존 영상 관제 솔루션에 AI 기능을 도입하며 데이터 수집부터 모델 학습, 실시간 서빙, 운영 제어까지 전 과정을 단독 주도한 사례입니다.</p>
-              <div class="tag-row">
-                <span class="tag">ResNet</span>
-                <span class="tag">FFT</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">WandB</span>
-              </div>
-            </div>
-            <span class="education-toggle">상세 이력 보기</span>
-          </div>
-        </summary>
-
-        <div class="education-body">
-          <div class="education-block">
-            <h4>기술적 문제 정의</h4>
-            <p class="body-copy">기존 영상 관제(VMS) 솔루션에 최초로 AI 기능을 도입하는 과정에서, 단순히 모델을 이식하는 수준을 넘어 실시간 환경의 변동성을 제어하는 서비스 파이프라인 구축이 필요했습니다. 특히 네트워크 대역폭에 따른 스트림의 불안정성과 현장 소음으로 인한 모델 성능 저하를 함께 해결하고, 9개 이상의 스트림을 동시에 처리할 수 있는 운영 표준을 수립하는 것을 목표로 삼았습니다. 데이터 수집, 모델링, 전처리, 실시간 서빙 파이프라인 설계, 운영 제어 API 구축에 이르는 전 과정을 단독 주도했습니다.</p>
-          </div>
-
-          <div class="education-block">
-            <h4>기술적 고민과 실험적 검증</h4>
-            <ul class="project-points">
-              <li>학습 데이터와 실제 현장 환경 간 분포 차이를 줄이기 위해 현장 데이터를 직접 수집하고, FFT 기반 특징 추출 로직과 Noise Injection을 적용한 ResNet 18/34 기반 비명 감지 모델을 구축</li>
-              <li>WandB 기반 실험 관리로 하이퍼파라미터 변화에 따른 지연 시간과 오탐률의 상관관계를 검증하며 운영 가능한 최적의 모델 선택</li>
-              <li>WebRTC의 적응형 비트레이트 특성상 해상도가 수시로 변하며 OpenCV 후처리 로직이 중단되는 문제를 해결하기 위해 모든 프레임을 Letterbox 알고리즘으로 정규화하고, YOLO 입력 규격을 고정</li>
-              <li>AI 모듈을 독립화해 특정 모델의 연산 병목이나 장애가 전체 스트림으로 전이되지 않도록 재설계하고, FastAPI 기반 제어 API를 구축해 설정 변경과 스트림 재시작을 런타임에 제어할 수 있는 운영 가시성 체계 마련</li>
-            </ul>
-          </div>
-
-          <div class="education-block">
-            <h4>성과 및 핵심 역량</h4>
-            <p class="body-copy">얼굴 블러 기능은 차기 솔루션 정식 버전에 반영되었고, 비명 감지 모델은 스마트 규제 샌드박스 사업에 적용되어 실제 납품 성과로 이어졌습니다. 데이터 수집부터 모델 학습, 실시간 스트리밍 최적화, 운영 지표 설계까지 전 과정을 주도하며 AI를 단독 기능이 아닌 지속 가능한 서비스로 완성하는 MLOps형 엔지니어링 역량을 확보했습니다.</p>
           </div>
         </div>
       </details>
@@ -335,19 +346,19 @@ nav_key: home
     </div>
 
     {% if site.posts.size > 0 %}
-      <div class="row g-4">
-        {% for post in site.posts limit:3 %}
-          <div class="col-lg-4 col-md-6">
-            {% include post-card.html post=post %}
-          </div>
-        {% endfor %}
+    <div class="row g-4">
+      {% for post in site.posts limit:3 %}
+      <div class="col-lg-4 col-md-6">
+        {% include post-card.html post=post %}
       </div>
+      {% endfor %}
+    </div>
     {% else %}
-      <div class="empty-state home-empty-state">
-        <i class="bi bi-journal-text" aria-hidden="true"></i>
-        <h3>첫 게시글을 기다리고 있어요.</h3>
-        <p>이제부터 작성하는 글이 여기에 최신순으로 표시됩니다.</p>
-      </div>
+    <div class="empty-state home-empty-state">
+      <i class="bi bi-journal-text" aria-hidden="true"></i>
+      <h3>첫 게시글을 기다리고 있어요.</h3>
+      <p>이제부터 작성하는 글이 여기에 최신순으로 표시됩니다.</p>
+    </div>
     {% endif %}
   </div>
 </section>
@@ -373,7 +384,8 @@ nav_key: home
         <div class="education-body">
           <p class="body-copy">
             팀 프로젝트로
-            <a href="https://github.com/Pangyo-Coffee-Legends" target="_blank" rel="noreferrer">Pangyo Coffee Legends</a>
+            <a href="https://github.com/Pangyo-Coffee-Legends" target="_blank" rel="noreferrer">Pangyo Coffee
+              Legends</a>
             를 진행했고, 데이터 흐름부터 운영 환경까지 전주기를 경험했습니다.
           </p>
 
@@ -405,7 +417,8 @@ nav_key: home
           </div>
 
           <p class="body-copy">
-            K-means 기반 쾌적 지표 모델링, EDA, FastAPI 파이프라인 구축, MQTT/InfluxDB 연동 안정화, 로그 시스템 설계, CI/CD 자동화와 Spring 환경 구성까지 경험하며 데이터 처리와 운영을 하나의 흐름으로 다뤄보았습니다.
+            K-means 기반 쾌적 지표 모델링, EDA, FastAPI 파이프라인 구축, MQTT/InfluxDB 연동 안정화, 로그 시스템 설계, CI/CD 자동화와 Spring 환경 구성까지 경험하며
+            데이터 처리와 운영을 하나의 흐름으로 다뤄보았습니다.
           </p>
         </div>
       </details>
